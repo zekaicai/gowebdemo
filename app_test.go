@@ -13,7 +13,7 @@ func Test_GetNameLen_1(t *testing.T) {
 }
 
 func Test_GetNameLen_2(t *testing.T) {
-	if l := getNameLen(""); l != 1 {
+	if l := getNameLen(""); l != 0 {
 		t.Error("test failed, the length of empty string is not correct.")
 	} else {
 		t.Log("test passed.")
