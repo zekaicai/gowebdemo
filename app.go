@@ -28,7 +28,7 @@ func main() {
 
 func getDayString() string {
 	nowTime := time.Now()
-	loc, _ := time.LoadLocation("Asia/Shanghai")
-	chTime := nowTime.In(loc)
-	return chTime.Format("20060102150405")
+	//loc, _ := time.LoadLocation("Asia/Shanghai")
+	//chTime := nowTime.In(loc)
+	return nowTime.Format("20060102150405")
 }
