@@ -5,7 +5,7 @@ import (
 )
 
 func Test_GetNameLen_1(t *testing.T) {
-	if l := getNameLen("nick"); l != 4 {
+	if l := getNameLen("nick"); l != 5 {
 		t.Error("test failed, the length of nick is not correct.")
 	} else {
 		t.Log("test passed.")
