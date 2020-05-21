@@ -10,7 +10,7 @@ func TestAdd(t *testing.T) {
 		len  int
 	}{
 		{"", 0},
-		{"zekai", 6},
+		{"zekai", 5},
 		{"xinran", 6},
 		{"yuwei", 5},
 	}
