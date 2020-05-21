@@ -4,26 +4,20 @@ import (
 	"testing"
 )
 
-func Test_GetNameLen_1(t *testing.T) {
-	if l := getNameLen("nick"); l != 5 {
-		t.Error("test failed, the length of nick is not correct.")
-	} else {
-		t.Log("test passed.")
+func TestAdd(t *testing.T) {
+	tests := []struct {
+		name string
+		len  int
+	}{
+		{"", 0},
+		{"zekai", 5},
+		{"xinran", 6},
+		{"yuwei", 5},
 	}
-}
 
-func Test_GetNameLen_2(t *testing.T) {
-	if l := getNameLen(""); l != 0 {
-		t.Error("test failed, the length of empty string is not correct.")
-	} else {
-		t.Log("test passed.")
-	}
-}
-
-func Test_GetNameLen_3(t *testing.T) {
-	if l := getNameLen("andrew"); l != 6 {
-		t.Error("test failed, the length of andrew string is not correct.")
-	} else {
-		t.Log("test passed.")
+	for _, tests := range tests {
+		if actual := getNameLen(tests.name); actual != tests.len {
+			t.Errorf("getNameLen(%s); "+"got %d, expected %d.", tests.name, actual, tests.len)
+		}
 	}
 }
